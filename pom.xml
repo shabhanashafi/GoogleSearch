@@ -9,7 +9,7 @@
 	<artifactId>CucumberPOM</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>CucumberPOMSeries</name>
+	<name>CucumberPOM</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -100,14 +100,10 @@
 			<version>4.13.2</version>
 			<scope>compile</scope>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
 		<plugins>
-
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -124,11 +120,9 @@
 				<version>${maven.surefire.version}</version>
 				<configuration>
 					<includes>
-						<include>**/ParallelRun.java</include>
+						<exclude>**/*TestRunner.java</exclude>
 					</includes>
-					<parallel>methods</parallel>
-					<threadCount>4</threadCount>
-					<useUnlimitedThreads>false</useUnlimitedThreads>
+
 				</configuration>
 			</plugin>
 

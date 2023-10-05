@@ -1,4 +1,4 @@
-package testrunners;
+package testRunners;
 
 
 import io.cucumber.junit.Cucumber;
@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+		tags = "@test",
 		features = {"src/main/resources/Features/googleSearch.feature"},
 		dryRun = false,
 		glue = {"StepDefinitions","ApplicationHooks"},
